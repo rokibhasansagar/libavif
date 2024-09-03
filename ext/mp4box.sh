@@ -4,7 +4,7 @@
 
 set -e
 
-git clone https://github.com/gpac/gpac.git
+git clone --filter=blob:none https://github.com/gpac/gpac.git
 
 cd gpac
 git checkout 5d70253 # GPAC 2.4.0

@@ -8,6 +8,8 @@ File Format, as described here:
 It can encode and decode all AV1 supported YUV formats and bit depths (with
 alpha).
 
+**PSST! PSY enjoyers - please just run `./ezbuild.sh` and you're good to go!**
+
 It is recommended that you check out/use
 [tagged releases](https://github.com/AOMediaCodec/libavif/releases) instead of
 just using the main branch. We will regularly create new versions as bug fixes
@@ -121,7 +123,7 @@ To link against the already installed `aom`, `libjpeg` and `libpng` dependency
 libraries (recommended):
 
 ```sh
-git clone -b v1.0.3 https://github.com/AOMediaCodec/libavif.git
+git clone -b v1.1.1 https://github.com/AOMediaCodec/libavif.git
 cd libavif
 cmake -S . -B build -DAVIF_CODEC_AOM=SYSTEM -DAVIF_BUILD_APPS=ON
 cmake --build build --parallel
@@ -132,7 +134,7 @@ cmake --build build --parallel
 For development and debugging purposes, or to generate fully static binaries:
 
 ```sh
-git clone -b v1.0.3 https://github.com/AOMediaCodec/libavif.git
+git clone -b v1.1.1 https://github.com/AOMediaCodec/libavif.git
 cd libavif/ext
 ./aom.cmd
 ./libyuv.cmd
