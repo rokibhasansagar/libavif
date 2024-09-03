@@ -9,6 +9,7 @@ on:
       - 'ext/**'
       - 'tests/gtest/**'
       - 'tests/oss-fuzz/**'
+  workflow_dispatch:
 
 permissions:
   contents: read

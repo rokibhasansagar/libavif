@@ -2,7 +2,10 @@
 # with an additional build configuration (using installed deps and dav1d).
 
 name: CI MinGW
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read

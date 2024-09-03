@@ -10,6 +10,7 @@ on:
     paths:
       - '.github/workflows/ci-android-emulator-tests.yml'
       - 'android_jni/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
