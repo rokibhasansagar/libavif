@@ -7,7 +7,7 @@
 : # If you're running this on Windows, be sure you've already run this (from your VC2019 install dir):
 : #     "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
 
-git clone https://github.com/google/fuzztest.git
+git clone --filter=blob:none https://github.com/google/fuzztest.git
 cd fuzztest
 : # There is no tagged release as of 2024/06/21. Pick the latest commit that works.
 git checkout 078ea0871cc96d3a69bad406577f176a4fa14ae9

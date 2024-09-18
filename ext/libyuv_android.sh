@@ -13,7 +13,7 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-git clone --single-branch https://chromium.googlesource.com/libyuv/libyuv
+git clone --single-branch --filter=blob:none https://chromium.googlesource.com/libyuv/libyuv
 
 cd libyuv
 : # When changing the commit below to a newer version of libyuv, it is best to make sure it is being used by chromium,

@@ -19,6 +19,7 @@ on:
       - '**CMakeLists.txt'
       - 'cmake/**'
       - 'ext/**'
+  workflow_dispatch:
 
 permissions:
   contents: read

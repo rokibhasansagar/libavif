@@ -8,13 +8,13 @@
 : # If you're running this on Windows, be sure you've already run this (from your VC2019 install dir):
 : #     "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
 
-git clone https://github.com/maryla-uc/libargparse.git
+git clone --filter=blob:none https://github.com/maryla-uc/libargparse.git
 
 cd libargparse
 git checkout 81998ffafb9c2ac8cf488d31e536a2e6fd6b3fdf
 
 mkdir build
 cd build
-cmake -G Ninja -DBUILD_SHARED_LIBS=OFF -DCMAKE_BUILD_TYPE=Release  ..
+cmake .. -G Ninja -DBUILD_SHARED_LIBS=OFF -DCMAKE_BUILD_TYPE=Release -Wno-dev
 cd ../..
 ninja -C libargparse/build

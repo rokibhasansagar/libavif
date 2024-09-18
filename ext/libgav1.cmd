@@ -9,12 +9,12 @@
 : #     "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
 
 : # When updating the libgav1 version, make the same change to libgav1_android.sh.
-git clone -b v0.19.0 --depth 1 https://chromium.googlesource.com/codecs/libgav1
+git clone -b v0.19.0 --filter=blob:none --depth 1 https://chromium.googlesource.com/codecs/libgav1
 
 cd libgav1
 mkdir build
 cd build
 
-cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DLIBGAV1_THREADPOOL_USE_STD_MUTEX=1 -DLIBGAV1_ENABLE_EXAMPLES=0 -DLIBGAV1_ENABLE_TESTS=0 -DLIBGAV1_MAX_BITDEPTH=12 ..
+cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DLIBGAV1_THREADPOOL_USE_STD_MUTEX=1 -DLIBGAV1_ENABLE_EXAMPLES=0 -DLIBGAV1_ENABLE_TESTS=0 -DLIBGAV1_MAX_BITDEPTH=12 -Wno-dev
 cd ../..
 ninja -C libgav1/build

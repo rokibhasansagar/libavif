@@ -94,14 +94,16 @@ else()
             GIT_REPOSITORY "https://gitlab.com/AOMediaCodec/avm.git"
             BINARY_DIR "${AOM_BINARY_DIR}"
             GIT_TAG ${AVIF_LOCAL_AVM_GIT_TAG}
-            GIT_PROGRESS ON
+            GIT_PROGRESS OFF
             GIT_SHALLOW ON
             UPDATE_COMMAND ""
         )
     else()
         FetchContent_Declare(
-            libaom URL "https://aomedia.googlesource.com/aom/+archive/${AVIF_LOCAL_AOM_GIT_TAG}.tar.gz" BINARY_DIR
-                       "${AOM_BINARY_DIR}" UPDATE_COMMAND ""
+            libaom
+            URL "https://gitlab.com/damian101/aom-psy101/-/archive/psy101/aom-psy101-psy101.tar.gz"
+            BINARY_DIR "${AOM_BINARY_DIR}"
+            UPDATE_COMMAND ""
         )
     endif()
 

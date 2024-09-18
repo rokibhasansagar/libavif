@@ -40,16 +40,19 @@ else()
 
     FetchContent_Declare(
         svt
-        GIT_REPOSITORY "https://gitlab.com/AOMediaCodec/SVT-AV1.git"
+        URL https://github.com/gianni-rosato/svt-av1-psy/archive/refs/heads/testing.tar.gz
+        # GIT_REPOSITORY "https://github.com/gianni-rosato/svt-av1-psy.git"
         BINARY_DIR "${SVT_BINARY_DIR}"
-        GIT_TAG "${AVIF_LOCAL_SVT_GIT_TAG}"
+        # GIT_TAG "${AVIF_LOCAL_SVT_GIT_TAG}"
         UPDATE_COMMAND ""
-        GIT_SHALLOW ON
+        # GIT_SHALLOW ON
     )
 
     set(BUILD_DEC OFF CACHE BOOL "")
     set(BUILD_APPS OFF CACHE BOOL "")
-    set(NATIVE OFF CACHE BOOL "")
+    set(BUILD_SHARED_LIBS OFF CACHE BOOL "")
+    set(NATIVE ON CACHE BOOL "")
+    set(SVT_AV1_LTO ON CACHE BOOL "")
 
     set(CMAKE_BUILD_TYPE_ORIG ${CMAKE_BUILD_TYPE})
     set(CMAKE_BUILD_TYPE Release CACHE INTERNAL "")
